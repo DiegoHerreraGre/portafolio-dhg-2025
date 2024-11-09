@@ -47,6 +47,19 @@ const projects = [
     mongodb: false,
   },
   {
+    name: 'Avellaneda Constructora',
+    description:
+      'Plataforma web especializada en servicio post venta para Avellaneda Constructora. Diseñada para facilitar el seguimiento de reparaciones, mantenimiento y atención al cliente después de la entrega de propiedades. Incluye sistema de tickets, seguimiento en tiempo real del estado de solicitudes y comunicación directa con el equipo de post venta',
+    link: {
+      href: 'https://www.avellaneda.vercel.app',
+      label: 'Avellaneda Constructora',
+    },
+    logo: NextJS,
+    production: false,
+    tailwind: true,
+    mongodb: true,
+  },
+  {
     name: 'Landing Inmobiliaria Manquehue',
     description:
       'Landing para la Inmobiliaria Manquehue usado para Cyber Day y Black Friday. Diseñado para maximizar las conversiones de ventas de propiedades. Construido con tecnologías modernas para garantizar un rendimiento óptimo y una experiencia de usuario fluida. Incluye un sistema de chat en vivo para atención al cliente en tiempo real',

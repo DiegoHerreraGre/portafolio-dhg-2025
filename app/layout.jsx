@@ -7,6 +7,7 @@ import '@/styles/tailwind.css'
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
+  weights: [400, 500, 600, 700],
 })
 
 export const metadata = {
@@ -49,7 +50,7 @@ export const metadata = {
   },
   alternates: {
     types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
+      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/api/feed.xml`,
     },
   },
 }
@@ -77,7 +78,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_SITE_URL}/images/bannerprincipal.png`}
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/bannerprincipal.png`}
         />
 
         {/* Twitter */}
@@ -93,7 +94,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="twitter:image"
-          content={`${process.env.NEXT_PUBLIC_SITE_URL}/images/bannerprincipal.png`}
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/bannerprincipal.png`}
         />
 
         {/* LinkedIn */}
