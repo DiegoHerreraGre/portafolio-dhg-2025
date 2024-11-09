@@ -1,10 +1,6 @@
 {
   "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    },
-    "feed.xml/**/*.js": {
+    "app/api/**/*.js": {
       "memory": 1024,
       "maxDuration": 60
     }
