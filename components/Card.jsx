@@ -29,8 +29,8 @@ export function Card({ as, className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-indigo-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-indigo-800/50" />
-      <Link {...props}>
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-indigo-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-20 sm:-inset-x-6 sm:rounded-2xl dark:bg-indigo-800/50" />
+      <Link {...props} target="_blank">
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
       </Link>

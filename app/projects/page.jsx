@@ -1,48 +1,63 @@
 import Image from 'next/image'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import NextJS from '@/images/logos/nextjs.svg'
+import Tailwind from '@/images/logos/tailwind.svg'
+import MongoDB from '@/images/logos/mongodb.svg'
+import React from '@/images/logos/reactjs.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Armando Di Filippo',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Sitio web del reconocido economista argentino, docente e investigador universitario con 40 años de experiencia en instituciones como CEPAL. Especializado en política económica, desarrollo social y pensamiento latinoamericano. El sitio presenta su extensa obra académica, publicaciones y pensamiento económico desarrollado a lo largo de su destacada trayectoria en América Latina',
+    link: {
+      href: 'https://www.armandodifilippo.com',
+      label: 'Armando Di Filippo',
+    },
+    logo: NextJS,
+    production: true,
+    tailwind: true,
+    mongodb: true,
   },
   {
-    name: 'Animaginary',
+    name: 'Estoril 820',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Sitio web inmobiliario moderno construido con tecnologías de última generación para reemplazar la antigua versión en WordPress. Diseñado con un enfoque dinámico de marketing digital para maximizar las ventas de propiedades. La arquitectura headless garantiza tiempos de carga ultrarrápidos y una experiencia de usuario fluida optimizada para conversiones',
+    link: {
+      href: 'https://www.estoril820.vercel.app',
+      label: 'Estoril 820',
+    },
+    logo: NextJS,
+    production: false,
+    tailwind: true,
+    mongodb: true,
   },
   {
-    name: 'HelioStream',
+    name: 'Cyber Molina Morel',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Sitio web inmobiliario moderno desarrollado con las últimas tecnologías web para mejorar la experiencia del usuario y las conversiones de ventas. Construido con una arquitectura headless que asegura un rendimiento óptimo y tiempos de carga mínimos. Cuenta con un sistema de filtrado avanzado de propiedades, visualización de imágenes en alta resolución',
+    link: {
+      href: 'https://www.cybermolinamorel.cl',
+      label: 'Cyber Molina Morel',
+    },
+    logo: NextJS,
+    production: true,
+    tailwind: true,
+    mongodb: false,
   },
   {
-    name: 'cosmOS',
+    name: 'Landing Inmobiliaria Manquehue',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Landing para la Inmobiliaria Manquehue usado para Cyber Day y Black Friday. Diseñado para maximizar las conversiones de ventas de propiedades. Construido con tecnologías modernas para garantizar un rendimiento óptimo y una experiencia de usuario fluida. Incluye un sistema de chat en vivo para atención al cliente en tiempo real',
+    link: {
+      href: 'https://www.imanquehue.mtmdigital.cl',
+      label: 'Landing Inmobiliaria Manquehue',
+    },
+    logo: React,
+    production: true,
+    tailwind: false,
+    mongodb: true,
   },
 ]
 
@@ -58,15 +73,15 @@ function LinkIcon(props) {
 }
 
 export const metadata = {
-  title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  title: 'Proyectos',
+  description: 'Webs creadas últimamente',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Webs creadas últimamente"
+      intro="A lo largo de mi trayectoria como desarrollador web full-stack, he creado diversos proyectos web implementando las últimas tecnologías como Next.js para el renderizado del lado del servidor (SSR), React para interfaces de usuario dinámicas, TailwindCSS para estilos modernos y responsivos, y Node.js/MongoDB para el backend. Utilizo PNPM como gestor de paquetes por su eficiencia y velocidad. Mi enfoque se centra en crear aplicaciones web rápidas, escalables y con excelente experiencia de usuario, aplicando las mejores prácticas de desarrollo."
     >
       <ul
         role="list"
@@ -74,10 +89,12 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-indigo-800/5 ring-1 ring-indigo-900/5 dark:border dark:border-indigo-700/50 dark:bg-indigo-800 dark:ring-0">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-indigo-800/5 ring-1 ring-indigo-900/5 dark:border dark:border-indigo-700/50 dark:bg-white dark:ring-0">
               <Image
                 src={project.logo}
-                alt=""
+                alt="logos de tecnologías utilizadas en el proyecto"
+                width={32}
+                height={32}
                 className="h-8 w-8"
                 unoptimized
               />
@@ -86,6 +103,68 @@ export default function Projects() {
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
+            {!project.production && (
+              <div className="mt-6 flex items-center justify-center">
+                <span className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-100 px-4 py-1 text-sm font-medium text-yellow-800 dark:border-yellow-700/50 dark:bg-yellow-900/30 dark:text-yellow-300">
+                  <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 16V12L14 14M12 8V8.01M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  En desarrollo
+                </span>
+              </div>
+            )}
+            {project.production && (
+              <div className="mt-6 flex items-center justify-center">
+                <span className="inline-flex items-center rounded-full border border-green-200 bg-green-100 px-4 py-1 text-sm font-medium text-green-800 dark:border-green-700/50 dark:bg-green-900/30 dark:text-green-300">
+                  <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  En producción
+                </span>
+              </div>
+            )}
+            {project.tailwind && (
+              <div className="mt-6 flex items-center space-x-2 rounded-lg bg-blue-50 p-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
+                <span>Desarrollado con</span>
+                <Image
+                  src={Tailwind}
+                  width={20}
+                  height={20}
+                  className="inline-block"
+                  alt="Tailwind logo"
+                />
+                <span className="font-semibold text-blue-600 dark:text-blue-300">
+                  Tailwind UI
+                </span>
+              </div>
+            )}
+            {project.mongodb && (
+              <div className="mt-6 flex items-center space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
+                <span>Bases de datos con</span>
+                <Image
+                  src={MongoDB}
+                  width={20}
+                  height={20}
+                  className="inline-block"
+                  alt="MongoDB logo"
+                />
+                <span className="font-semibold text-green-600 dark:text-green-300">
+                  MongoDB
+                </span>
+              </div>
+            )}
             <p className="relative z-10 mt-6 flex text-sm font-medium text-indigo-400 transition group-hover:text-teal-500 dark:text-indigo-200">
               <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">{project.link.label}</span>

@@ -138,7 +138,7 @@ function Role({ role }) {
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-indigo-800/5 ring-1 ring-indigo-900/5 dark:border dark:border-indigo-700/50 dark:bg-indigo-800 dark:ring-0">
         <Image
           src={role.logo}
-          alt=""
+          alt="logos usados"
           className="h-10 w-10 rounded-full bg-white"
           unoptimized
         />

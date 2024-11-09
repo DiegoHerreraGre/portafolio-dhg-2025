@@ -123,7 +123,7 @@ function MobileNavigation(props) {
   )
 }
 
-function NavItem({ href, children }) {
+function NavItem({ href, children, className }) {
   let isActive = usePathname() === href
 
   return (
@@ -132,6 +132,7 @@ function NavItem({ href, children }) {
         href={href}
         className={clsx(
           'relative block px-3 py-2 transition',
+          className,
           isActive
             ? 'text-teal-500 dark:text-teal-400'
             : 'hover:text-teal-500 dark:hover:text-teal-400',
@@ -150,8 +151,12 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="text- flex rounded-full bg-white/90 px-3 font-medium text-indigo-800 shadow-lg shadow-indigo-800/5 ring-1 ring-indigo-900/5 backdrop-blur dark:bg-indigo-800/90 dark:text-indigo-200 dark:ring-white/10">
-        <NavItem href="/about">Sobre mí</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
+        <NavItem href="" className={'text-indigo-200 dark:text-indigo-400'}>
+          Sobre mí
+        </NavItem>
+        <NavItem href="" className={'text-indigo-200 dark:text-indigo-400'}>
+          Articles
+        </NavItem>
         <NavItem href="/projects">Proyectos</NavItem>
       </ul>
     </nav>
