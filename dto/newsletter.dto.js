@@ -1,6 +1,7 @@
 export class NewsletterDTO {
-  constructor({ email, subscriptionDate, active }) {
+  constructor({ email, selectOption, subscriptionDate, active }) {
     this.email = email
+    this.selectOption = selectOption
     this.subscriptionDate = subscriptionDate
     this.active = active
   }

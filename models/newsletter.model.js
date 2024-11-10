@@ -12,6 +12,10 @@ const newsletterSchema = new mongoose.Schema({
       'Please provide a valid email address',
     ],
   },
+  selectOption: {
+    type: String,
+    required: true,
+  },
   subscriptionDate: {
     type: Date,
     default: Date.now,

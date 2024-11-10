@@ -5,6 +5,7 @@ export class NewsletterDAO {
     try {
       const newsletter = new Newsletter({
         email: newsletterDTO.email,
+        selectOption: newsletterDTO.selectOption,
         subscriptionDate: newsletterDTO.subscriptionDate,
         active: newsletterDTO.active,
       })
@@ -16,6 +17,4 @@ export class NewsletterDAO {
       )
     }
   }
-
-  // Otros métodos como getAll, getByEmail, update, delete, etc.
 }

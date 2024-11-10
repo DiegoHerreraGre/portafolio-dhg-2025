@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import spotifyLogo from '@/images/logos/spotify.svg'
 
 import { Container } from '@/components/Container'
 import {
@@ -24,17 +25,6 @@ function SocialLink({ className, href, children, icon: Icon }) {
   )
 }
 
-function MailIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-      />
-    </svg>
-  )
-}
-
 export const metadata = {
   title: 'About',
   description:
@@ -55,7 +45,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="lg:order-first lg:row-span-2">
+        <div className="text-justify lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Soy Diego Herrera, un desarrollador apasionado por crear soluciones
             tecnológicas.
@@ -90,6 +80,56 @@ export default function About() {
               especialmente Bash.
             </p>
           </div>
+          <article className="mt-12 rounded-xl bg-zinc-50 p-6 shadow-lg dark:bg-zinc-800/50">
+            <h4 className="flex flex-row justify-stretch gap-4 text-3xl font-bold text-zinc-800 dark:text-zinc-100">
+              Playlists de
+              <Image src={spotifyLogo} alt="Spotify" width={40} height={40} />
+            </h4>
+            <p className="mt-4 animate-pulse text-center font-medium text-teal-600 dark:text-teal-400">
+              Estas son algunas de mis listas de reproducción favoritas
+            </p>
+            <ul className="mt-6 space-y-4">
+              <li className="transform transition-all hover:rotate-1 hover:scale-105">
+                <a
+                  href="https://open.spotify.com/playlist/6Hl4HtEsBbE72iTCRrtHPZ?si=a56d170ba3ab46eb"
+                  className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
+                >
+                  <strong className="text-zinc-900 transition-colors group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
+                    Tunes Midnight
+                  </strong>
+                  <span className="text-md ml-auto transform text-[#00DA5A] transition-transform group-hover:scale-110">
+                    Spotify
+                  </span>
+                </a>
+              </li>
+              <li className="transform transition-all hover:rotate-1 hover:scale-105">
+                <a
+                  href="https://open.spotify.com/playlist/7rwf3YJPSzIuu4mh3JI7Ow?si=b5b6710a5eac4ffd"
+                  className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
+                >
+                  <strong className="text-zinc-900 transition-colors group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
+                    Electronic Remix
+                  </strong>
+                  <span className="text-md ml-auto transform text-[#00DA5A] transition-transform group-hover:scale-110">
+                    Spotify
+                  </span>
+                </a>
+              </li>
+              <li className="transform transition-all hover:rotate-1 hover:scale-105">
+                <a
+                  href="https://open.spotify.com/playlist/7eMu1fmkKxbfCeGIeapp99?si=26cebc6f2f4d43c6"
+                  className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
+                >
+                  <strong className="text-zinc-900 transition-colors group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
+                    Gaming Memento
+                  </strong>
+                  <span className="text-md ml-auto transform text-[#00DA5A] transition-transform group-hover:scale-110">
+                    Spotify
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </article>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
@@ -98,28 +138,21 @@ export default function About() {
               icon={InstagramIcon}
               className="mt-4"
             >
-              Follow on Instagram
+              Sígueme en Instagram
             </SocialLink>
             <SocialLink
               href="https://www.github.com/DiegoHerreraGre"
               icon={GitHubIcon}
               className="mt-4"
             >
-              Follow on GitHub
+              Sígueme en GitHub
             </SocialLink>
             <SocialLink
               href="https://www.linkedin.com/in/diego-f-herrera-gre/"
               icon={LinkedInIcon}
               className="mt-4"
             >
-              Follow on LinkedIn
-            </SocialLink>
-            <SocialLink
-              href="mailto:diegofherreragre@icloud.com"
-              icon={MailIcon}
-              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-            >
-              diegofherreragre@icloud.com
+              Sígueme en LinkedIn
             </SocialLink>
           </ul>
         </div>

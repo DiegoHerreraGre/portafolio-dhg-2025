@@ -117,7 +117,7 @@ export default function Projects() {
             </h2>
             <Card.Description>{project.description}</Card.Description>
             {!project.production && (
-              <div className="mt-6 flex items-center justify-center">
+              <div className="z-10 mt-6 flex items-center justify-center">
                 <span className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-100 px-4 py-1 text-sm font-medium text-yellow-800 dark:border-yellow-700/50 dark:bg-yellow-900/30 dark:text-yellow-300">
                   <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
                     <path
@@ -133,7 +133,7 @@ export default function Projects() {
               </div>
             )}
             {project.production && (
-              <div className="mt-6 flex items-center justify-center">
+              <div className="z-10 mt-6 flex items-center justify-center">
                 <span className="inline-flex items-center rounded-full border border-green-200 bg-green-100 px-4 py-1 text-sm font-medium text-green-800 dark:border-green-700/50 dark:bg-green-900/30 dark:text-green-300">
                   <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
                     <path
@@ -149,7 +149,7 @@ export default function Projects() {
               </div>
             )}
             {project.tailwind && (
-              <div className="mt-6 flex items-center space-x-2 rounded-lg bg-blue-50 p-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
+              <div className="z-10 mt-6 flex items-center space-x-2 rounded-lg bg-blue-50 p-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
                 <span>Desarrollado con</span>
                 <Image
                   src={Tailwind}
@@ -164,7 +164,7 @@ export default function Projects() {
               </div>
             )}
             {project.mongodb && (
-              <div className="mt-6 flex items-center space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
+              <div className="items-cente z-10 mt-6 flex space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
                 <span>Bases de datos con</span>
                 <Image
                   src={MongoDB}

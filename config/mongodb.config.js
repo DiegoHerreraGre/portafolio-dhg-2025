@@ -1,7 +1,7 @@
 'use server'
 
 import mongoose from 'mongoose'
-import { envs } from './envs.config.js'
+import envs from './envs.config.js'
 
 const { MONGO_URI } = envs
 

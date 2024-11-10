@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_SITE_URL}/bannerprincipal.png`}
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/og_image.png`}
         />
 
         {/* Twitter */}
@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="twitter:image"
-          content={`${process.env.NEXT_PUBLIC_SITE_URL}/bannerprincipal.png`}
+          content={`${process.env.NEXT_PUBLIC_SITE_URL}/og_twitter.png`}
         />
 
         {/* LinkedIn */}
