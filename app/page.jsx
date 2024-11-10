@@ -17,6 +17,7 @@ import image2 from '@/images/photos/image-2.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
+import Pricing from '@/components/Pricing'
 
 function BriefcaseIcon(props) {
   return (
@@ -226,7 +227,10 @@ export default async function Home() {
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-32">
+        <Pricing />
+      </Container>
+      <Container className="mt-2 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">

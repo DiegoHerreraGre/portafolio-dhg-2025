@@ -44,6 +44,22 @@ export default function Stack() {
         slug: 'mongodb',
         description: 'Base de datos NoSQL - No relacionales',
       },
+      {
+        name: 'PHP',
+        slug: 'php',
+        description: 'Lenguaje de programación para desarrollo web',
+      },
+      {
+        name: 'Python',
+        slug: 'python',
+        description: 'Lenguaje versátil para backend y scripting',
+      },
+      {
+        name: 'Rust',
+        slug: 'rust',
+        description:
+          'Lenguaje de sistemas de alto rendimiento (en aprendizaje)',
+      },
     ],
     DevOps: [
       {
@@ -92,9 +108,14 @@ export default function Stack() {
   }
 
   const TechIcon = ({ slug, name }) => {
-    const isInverted = ['express', 'vercel', 'nextdotjs', 'github'].includes(
-      slug,
-    )
+    const isInverted = [
+      'express',
+      'vercel',
+      'nextdotjs',
+      'github',
+      'rust',
+      'python',
+    ].includes(slug)
 
     return (
       <div className="relative mr-3 h-6 w-6">
