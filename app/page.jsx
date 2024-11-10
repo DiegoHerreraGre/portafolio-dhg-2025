@@ -89,7 +89,8 @@ function Role({ role }) {
           src={role.logo}
           alt="logos usados"
           className="h-10 w-10 rounded-full bg-white"
-          unoptimized
+          width={40}
+          height={40}
         />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">

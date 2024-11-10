@@ -1,3 +1,7 @@
+'use client'
+
+import Image from 'next/image'
+
 export default function Stack() {
   const techCategories = {
     Frontend: [
@@ -83,6 +87,31 @@ export default function Stack() {
     ],
   }
 
+  const handleImageError = (e) => {
+    e.target.src = '/images/fallback-icon.svg' // Asegúrate de tener una imagen de respaldo
+  }
+
+  const TechIcon = ({ slug, name }) => {
+    const isInverted = ['express', 'vercel', 'nextdotjs', 'github'].includes(
+      slug,
+    )
+
+    return (
+      <div className="relative mr-3 h-6 w-6">
+        <Image
+          src={`https://cdn.simpleicons.org/${slug}`}
+          alt={`${name} icon`}
+          width={24}
+          height={24}
+          className={`object-contain ${isInverted ? 'dark:invert' : ''}`}
+          onError={handleImageError}
+          unoptimized // Usar esto para imágenes externas pequeñas
+          loading="lazy"
+        />
+      </div>
+    )
+  }
+
   return (
     <div className="mx-auto mt-12 w-full max-w-4xl p-6">
       <h2 className="mb-8 text-center text-3xl font-bold">Stack Tecnológico</h2>
@@ -110,20 +139,7 @@ export default function Stack() {
                     >
                       <td className="whitespace-nowrap px-6 py-4">
                         <div className="flex items-center">
-                          <img
-                            src={`https://cdn.simpleicons.org/${tech.slug}`}
-                            alt={tech.name}
-                            className={`mr-3 h-6 w-6 ${
-                              [
-                                'express',
-                                'vercel',
-                                'nextdotjs',
-                                'github',
-                              ].includes(tech.slug)
-                                ? 'dark:invert'
-                                : ''
-                            }`}
-                          />
+                          <TechIcon slug={tech.slug} name={tech.name} />
                           <span>{tech.name}</span>
                         </div>
                       </td>
