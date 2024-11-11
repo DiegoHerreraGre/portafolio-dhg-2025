@@ -105,14 +105,14 @@ function classNames(...classes) {
 
 export default function Pricing() {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-black">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mt-2 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+          <p className="mt-2 animate-pulse text-balance text-5xl font-semibold tracking-tight text-gray-900 antialiased sm:text-6xl dark:text-gray-200">
             Un precio solo para ti
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium text-gray-600 sm:text-xl/8">
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium text-gray-600 sm:text-xl/8 dark:text-gray-400">
           Escoge el plan que mejor se adapte a tus necesidades para tener una
           asesoría personalizada y un servicio de calidad.
         </p>
@@ -121,10 +121,16 @@ export default function Pricing() {
             <div
               key={tier.id}
               className={classNames(
-                tier.mostPopular ? 'lg:z-10 lg:rounded-2xl' : 'lg:mt-8',
-                tierIdx === 0 ? 'lg:rounded-2xl' : '',
-                tierIdx === tiers.length - 1 ? 'lg:rounded-2xl' : '',
-                'flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10',
+                tier.mostPopular
+                  ? 'transition-all duration-300 hover:scale-110 lg:z-10 lg:rounded-[2rem] hover:lg:rounded-[5.5rem]'
+                  : 'lg:mt-8',
+                tierIdx === 0
+                  ? 'lg:rounded-bl-[1rem] lg:rounded-tr-[2rem]'
+                  : '',
+                tierIdx === tiers.length - 1
+                  ? 'lg:rounded-br-[1rem] lg:rounded-tl-[2rem]'
+                  : '',
+                'flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 dark:bg-slate-700',
               )}
             >
               <div>
@@ -132,35 +138,37 @@ export default function Pricing() {
                   <h3
                     id={tier.id}
                     className={classNames(
-                      tier.mostPopular ? 'text-teal-600' : 'text-gray-900',
+                      tier.mostPopular
+                        ? 'text-teal-600 dark:text-teal-300'
+                        : 'text-gray-900 dark:text-gray-300',
                       'text-lg/8 font-semibold',
                     )}
                   >
                     {tier.name}
                   </h3>
                   {tier.mostPopular ? (
-                    <p className="rounded-full bg-teal-600/10 px-2.5 py-1 text-center text-xs/5 font-semibold text-teal-600">
+                    <p className="rounded-full bg-teal-600/10 px-2.5 py-1 text-center text-xs/5 font-semibold text-teal-600 dark:bg-teal-300/10 dark:text-teal-200">
                       Más elegido
                     </p>
                   ) : null}
                 </div>
-                <p className="mt-4 text-sm/6 text-gray-600">
+                <p className="mt-4 text-sm/6 text-gray-600 dark:text-gray-300">
                   {tier.description}
                 </p>
                 <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-4xl font-semibold tracking-tight text-gray-900">
+                  <span className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-gray-300">
                     {tier.priceMonthly}
                   </span>
                 </p>
                 <ul
                   role="list"
-                  className="mt-8 space-y-3 text-sm/6 text-gray-600"
+                  className="mt-8 space-y-3 text-sm/6 text-gray-600 dark:text-gray-200"
                 >
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
                       <CheckIcon
                         aria-hidden="true"
-                        className="h-6 w-5 flex-none text-teal-600"
+                        className="h-6 w-5 flex-none text-teal-600 dark:text-teal-200"
                       />
                       {feature}
                     </li>
