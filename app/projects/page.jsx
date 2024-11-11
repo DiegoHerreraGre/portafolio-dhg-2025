@@ -21,7 +21,7 @@ const projects = [
     mongodb: true,
   },
   {
-    name: 'Estoril 820',
+    name: 'Estoril 820 - FDI',
     description:
       'Sitio web inmobiliario moderno construido con tecnologías de última generación para reemplazar la antigua versión en WordPress. Diseñado con un enfoque dinámico de marketing digital para maximizar las ventas de propiedades. La arquitectura headless garantiza tiempos de carga ultrarrápidos y una experiencia de usuario fluida optimizada para conversiones',
     link: {
@@ -32,6 +32,19 @@ const projects = [
     production: false,
     tailwind: true,
     mongodb: true,
+  },
+  {
+    name: 'Barrio Cueto - Urmeneta GI',
+    description:
+      'Landing para la campaña Barrio Cueto que busca maximizar conversiones con nuevas ofertas constantes para el cliente Urmeneta GI.',
+    link: {
+      href: 'https://www.barriocueto.cl',
+      label: 'Barrio Cueto',
+    },
+    logo: NextJS,
+    production: true,
+    tailwind: false,
+    mongodb: false,
   },
   {
     name: 'Cyber Molina Morel',
