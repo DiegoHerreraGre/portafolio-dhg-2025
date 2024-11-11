@@ -34,17 +34,17 @@ const projects = [
     mongodb: true,
   },
   {
-    name: 'Barrio Cueto - Urmeneta GI',
+    name: 'Landing Barrio Cueto - Urmeneta GI',
     description:
-      'Landing para la campaña Barrio Cueto que busca maximizar conversiones con nuevas ofertas constantes para el cliente Urmeneta GI.',
+      'Landing page diseñada para la campaña de Barrio Cueto, enfocada en maximizar conversiones mediante ofertas constantes y atractivas, dirigida al cliente Urmeneta GI. El proyecto destaca por su enfoque en optimización y rendimiento.',
     link: {
       href: 'https://www.barriocueto.cl',
       label: 'Barrio Cueto',
     },
     logo: NextJS,
     production: true,
-    tailwind: false,
-    mongodb: false,
+    tailwind: true,
+    mongodb: true,
   },
   {
     name: 'Cyber Molina Morel',
@@ -73,7 +73,7 @@ const projects = [
     mongodb: true,
   },
   {
-    name: 'Landing Inmobiliaria Manquehue',
+    name: 'Landing Black/Cyber - Inmobiliaria Manquehue',
     description:
       'Landing para la Inmobiliaria Manquehue usado para Cyber Day y Black Friday. Diseñado para maximizar las conversiones de ventas de propiedades. Construido con tecnologías modernas para garantizar un rendimiento óptimo y una experiencia de usuario fluida. Incluye un sistema de chat en vivo para atención al cliente en tiempo real',
     link: {
