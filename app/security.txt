@@ -1,0 +1,4 @@
+Contact: mailto:diegoherreragre@gmail.com
+Expires: 2030-11-12T03:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://www.diegoherreragre.dev/security.txt
