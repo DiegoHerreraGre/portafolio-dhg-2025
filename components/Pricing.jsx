@@ -105,7 +105,7 @@ function classNames(...classes) {
 
 export default function Pricing() {
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white dark:bg-[#08080A]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mt-2 animate-pulse text-balance text-5xl font-semibold tracking-tight text-gray-900 antialiased sm:text-6xl dark:text-gray-200">
