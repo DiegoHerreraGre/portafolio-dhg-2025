@@ -56,7 +56,7 @@ function Article({ article }) {
         })}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>Leer artículo</Card.Cta>
     </Card>
   )
 }
