@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Stack() {
   const techCategories = {
@@ -135,8 +136,9 @@ export default function Stack() {
 
   return (
     <div className="mx-auto mt-12 w-full max-w-4xl p-6">
-      <h2 className="mb-8 text-center text-3xl font-bold">Stack Tecnológico</h2>
+      <h2 className="mb-8 text-center text-6xl font-bold">Stack Tecnológico</h2>
       <div className="space-y-8">
+        <Editor />
         {Object.entries(techCategories).map(([category, technologies]) => (
           <div key={category} className="rounded-lg bg-white/5 p-6">
             <h3 className="mb-4 text-xl font-semibold">{category}</h3>
@@ -176,6 +178,81 @@ export default function Stack() {
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  )
+}
+
+export const Editor = () => {
+  return (
+    <div className="mx-auto mt-12 w-full max-w-4xl p-6">
+      <h2 className="mb-8 text-center text-3xl font-bold">Editor de Código</h2>
+      <div className="space-y-8">
+        <div className="rounded-lg bg-white/5 p-6">
+          <div className="flex flex-col flex-wrap items-center justify-center gap-4">
+            <Link href={'https://www.zed.dev'}>
+              <Image
+                src="/zed.png"
+                alt="Zed icon"
+                width={340}
+                height={340}
+                className="my-12 mr-3 dark:invert"
+              />
+            </Link>
+            <Image
+              src="/zedimage.webp"
+              alt="Zed image"
+              width={1920}
+              height={1080}
+              className="rounded-2xl"
+            />
+            <p className="text-justify text-gray-800 dark:text-gray-200">
+              Zed es un editor de código sobresaliente gracias a su interfaz
+              intuitiva, soporte para múltiples lenguajes de programación y
+              herramientas avanzadas de depuración. Su rendimiento excepcional
+              permite a los desarrolladores trabajar de manera eficiente y sin
+              interrupciones.
+            </p>
+            <p className="text-justify text-gray-800 dark:text-gray-200">
+              Construido en Rust, Zed no solo es extremadamente rápido, sino que
+              también consume muy poca memoria en comparación con Visual Studio
+              Code, que al estar basado en JavaScript, funciona como un
+              navegador web abierto.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2 className="my-8 text-center text-3xl font-bold">Terminal</h2>
+      <div className="space-y-8">
+        <div className="rounded-lg bg-white/5 p-6">
+          <div className="flex flex-col flex-wrap items-center justify-center gap-4">
+            <Link href={'https://www.warp.dev'}>
+              <Image
+                src="/warp.png"
+                alt="Warp icon"
+                width={340}
+                height={340}
+                className="my-12 mr-3"
+              />
+            </Link>
+            <Image
+              src="/warpimage.webp"
+              alt="Warp image"
+              width={1920}
+              height={1080}
+              className="mb-12 rounded-2xl shadow-2xl"
+            />
+            <p className="text-justify text-gray-800 dark:text-gray-200">
+              Warp es una terminal que busca mejorar la experiencia de los
+              programadores incluyendo características como autocompletado,
+              resaltado de sintaxis y una UI/UX amigable.
+            </p>
+            <p className="text-justify text-gray-800 dark:text-gray-200">
+              Al igual que Zed, Warp está construido en Rust, lo que le permite
+              ser extremadamente rápido y eficiente en el uso de recursos.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   )

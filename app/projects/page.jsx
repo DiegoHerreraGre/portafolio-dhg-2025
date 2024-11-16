@@ -19,6 +19,7 @@ const projects = [
     production: true,
     tailwind: true,
     mongodb: true,
+    creation: false,
   },
   {
     name: 'Estoril 820 - FDI',
@@ -32,6 +33,21 @@ const projects = [
     production: false,
     tailwind: true,
     mongodb: true,
+    creation: false,
+  },
+  {
+    name: 'Retail Financiero - ONG',
+    description:
+      'Diseño y desarrollo de la nueva web de Retail Financiero, una plataforma dedicada a ofrecer asesoramiento financiero especializado en el mercado de retail en Chile. La web proporciona recursos y herramientas para ayudar a los usuarios a tomar decisiones financieras informadas y efectivas.',
+    link: {
+      href: 'https://www.retailfinanciero.vercel.app',
+      label: 'Retail Financiero',
+    },
+    logo: NextJS,
+    production: false,
+    tailwind: true,
+    mongodb: true,
+    creation: true,
   },
   {
     name: 'Landing Barrio Cueto - Urmeneta GI',
@@ -45,6 +61,7 @@ const projects = [
     production: true,
     tailwind: true,
     mongodb: true,
+    creation: false,
   },
   {
     name: 'Cyber Molina Morel',
@@ -58,6 +75,7 @@ const projects = [
     production: true,
     tailwind: true,
     mongodb: false,
+    creation: false,
   },
   {
     name: 'Avellaneda Constructora',
@@ -71,6 +89,7 @@ const projects = [
     production: false,
     tailwind: true,
     mongodb: true,
+    creation: false,
   },
   {
     name: 'Landing Black/Cyber - Inmobiliaria Manquehue',
@@ -84,6 +103,7 @@ const projects = [
     production: true,
     tailwind: false,
     mongodb: true,
+    creation: false,
   },
 ]
 
@@ -129,7 +149,7 @@ export default function Projects() {
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            {!project.production && (
+            {!project.production && !project.creation && (
               <div className="z-10 mt-6 flex items-center justify-center">
                 <span className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-100 px-4 py-1 text-sm font-medium text-yellow-800 dark:border-yellow-700/50 dark:bg-yellow-900/30 dark:text-yellow-300">
                   <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
@@ -158,6 +178,22 @@ export default function Projects() {
                     />
                   </svg>
                   En producción
+                </span>
+              </div>
+            )}
+            {!project.production && project.creation && (
+              <div className="z-10 mt-6 flex items-center justify-center">
+                <span className="inline-flex items-center rounded-full border border-pink-200 bg-pink-100 px-4 py-1 text-sm font-medium text-pink-800 dark:border-pink-700/50 dark:bg-pink-900/30 dark:text-pink-300">
+                  <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M2 21l1.5-1.5L8 15l-1.5-1.5L2 18v3zm2-2l1.5-1.5L8 13l-1.5-1.5L4 17v2zm2-2l1.5-1.5L8 11l-1.5-1.5L6 15v1zm2-2l1.5-1.5L8 9l-1.5-1.5L8 13v-1zm2-2l1.5-1.5L8 7l-1.5-1.5L10 11V9zm2-2l1.5-1.5L8 5l-1.5-1.5L12 9V7zm2-2l1.5-1.5L8 3l-1.5-1.5L14 7V5zm2-2l1.5-1.5L8 1l-1.5-1.5L16 5V3zm2-2l1.5-1.5L8 0l-1.5-1.5L18 3V1z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  En creación
                 </span>
               </div>
             )}
