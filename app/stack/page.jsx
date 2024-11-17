@@ -190,34 +190,33 @@ export const Editor = () => {
       <div className="space-y-8">
         <div className="rounded-lg bg-white/5 p-6">
           <div className="flex flex-col flex-wrap items-center justify-center gap-4">
-            <Link href={'https://www.zed.dev'}>
+            <Link href={'https://www.cursor.com'}>
               <Image
-                src="/zed.png"
-                alt="Zed icon"
+                src="/cursor.jpg"
+                alt="Cursor icon"
                 width={340}
                 height={340}
                 className="my-12 mr-3 dark:invert"
               />
             </Link>
             <Image
-              src="/zedimage.webp"
-              alt="Zed image"
+              src="/cursorimage.jpg"
+              alt="Cursor image"
               width={1920}
               height={1080}
               className="rounded-2xl"
             />
             <p className="text-justify text-gray-800 dark:text-gray-200">
-              Zed es un editor de código sobresaliente gracias a su interfaz
-              intuitiva, soporte para múltiples lenguajes de programación y
-              herramientas avanzadas de depuración. Su rendimiento excepcional
-              permite a los desarrolladores trabajar de manera eficiente y sin
-              interrupciones.
+              Cursor es un editor de código con una interfaz intuitiva, soporte
+              para múltiples lenguajes de programación y herramientas avanzadas
+              de depuración. Su rendimiento excepcional permite a los
+              desarrolladores trabajar de manera eficiente y sin interrupciones.
             </p>
             <p className="text-justify text-gray-800 dark:text-gray-200">
-              Construido en Rust, Zed no solo es extremadamente rápido, sino que
-              también consume muy poca memoria en comparación con Visual Studio
-              Code, que al estar basado en JavaScript, funciona como un
-              navegador web abierto.
+              Construido como un fork de Visual Studio Code, Cursor no solo es
+              extremadamente rápido, sino que también consume muy poca memoria
+              en comparación con Visual Studio Code, que al estar basado en
+              JavaScript, funciona como un navegador web abierto.
             </p>
           </div>
         </div>
