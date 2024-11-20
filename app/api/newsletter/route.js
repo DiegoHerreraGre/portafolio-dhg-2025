@@ -4,6 +4,9 @@ import { connectMongoDB } from '../../../config/mongodb.config'
 import { NewsletterDTO } from '../../../dto/newsletter.dto'
 import { NewsletterDAO } from '../../../dao/newsletter.dao'
 import sendEmail from '@/services/email.service'
+import envs from '@/config/envs.config'
+
+const { MTM_MAIL_PERSONAL } = envs
 
 export async function POST(request) {
   try {
@@ -91,7 +94,7 @@ export async function POST(request) {
     `
 
     // Enviar emails
-    const adminEmail = 'nodemailer@mtmdigital.cl' // Reemplaza con tu email de administrador
+    const adminEmail = MTM_MAIL_PERSONAL
 
     await Promise.all([
       sendEmail(adminEmail, 'Nuevo contacto hecho', adminEmailContent, true),
