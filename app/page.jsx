@@ -95,15 +95,15 @@ function Role({ role }) {
         />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
-        <dt className="sr-only">Company</dt>
+        <dt className="sr-only">Compañía</dt>
         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
           {role.company}
         </dd>
-        <dt className="sr-only">Role</dt>
+        <dt className="sr-only">Rol</dt>
         <dd className="text-xs text-zinc-500 dark:text-zinc-400">
           {role.title}
         </dd>
-        <dt className="sr-only">Date</dt>
+        <dt className="sr-only">Fecha</dt>
         <dd
           className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
           aria-label={`${startLabel} until ${endLabel}`}
