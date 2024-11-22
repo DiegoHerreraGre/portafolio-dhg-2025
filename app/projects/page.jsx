@@ -38,7 +38,7 @@ const projects = [
   {
     name: 'San Isidro - Landing',
     description:
-      'Landing inmobiliario para cliente San Isidro para inscripciones de ofertas para el Black Friday 2024',
+      'Landing inmobiliario para cliente San Isidro para inscripciones de ofertas para el Black Friday 2024. El sitio se propone como una alternativa a los landings de WordPress del cliente para mejorar la convertibilidad y velocidad más una mejora sustantiva del SEO manual.',
     link: {
       href: 'https://sanisidro.mtmdigital.cl/inscribete',
       label: 'San Isidro'
