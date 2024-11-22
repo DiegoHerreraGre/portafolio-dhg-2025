@@ -43,7 +43,7 @@ const projects = [
       href: 'https://sanisidro.mtmdigital.cl/inscribete',
       label: 'San Isidro'
     },
-    logo: Next JS,
+    logo: NextJS,
     production: true,
     tailwind: false,
     mongodb: true,
