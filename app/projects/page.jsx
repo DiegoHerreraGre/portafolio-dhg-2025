@@ -36,6 +36,20 @@ const projects = [
     creation: false,
   },
   {
+    name: 'San Isidro - Landing',
+    description:
+      'Landing inmobiliario para cliente San Isidro para inscripciones de ofertas para el Black Friday 2024',
+    link: {
+      href: 'https://sanisidro.mtmdigital.cl/inscribete',
+      label: 'San Isidro'
+    },
+    logo: Next JS,
+    production: true,
+    tailwind: false,
+    mongodb: true,
+    creation: false,
+  },
+  {
     name: 'Retail Financiero - ONG',
     description:
       'Diseño y desarrollo de la nueva web de Retail Financiero, una plataforma dedicada a ofrecer asesoramiento financiero especializado en el mercado de retail en Chile. La web proporciona recursos y herramientas para ayudar a los usuarios a tomar decisiones financieras informadas y efectivas.',
