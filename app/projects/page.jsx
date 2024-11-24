@@ -52,7 +52,7 @@ const projects = [
   {
     name: 'Retail Financiero - ONG',
     description:
-      'Diseño y desarrollo de la nueva web de Retail Financiero, una plataforma dedicada a ofrecer asesoramiento financiero especializado en el mercado de retail en Chile. La web proporciona recursos y herramientas para ayudar a los usuarios a tomar decisiones financieras informadas y efectivas.',
+      'Diseño y desarrollo de la nueva web con propuesta de CMS en el backend para Retail Financiero, una plataforma dedicada a ofrecer asesoramiento financiero especializado en el mercado de retail en Chile. La web proporciona recursos y herramientas para ayudar a los usuarios a tomar decisiones financieras informadas y efectivas.',
     link: {
       href: 'https://www.retailfinanciero.vercel.app',
       label: 'Retail Financiero',
@@ -60,8 +60,8 @@ const projects = [
     logo: NextJS,
     production: false,
     tailwind: true,
-    mongodb: true,
-    creation: true,
+    mongodb: false,
+    creation: false,
   },
   {
     name: 'Landing Barrio Cueto - Urmeneta GI',
