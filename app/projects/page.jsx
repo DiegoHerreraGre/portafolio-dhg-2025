@@ -251,7 +251,7 @@ export default function Projects() {
             )}
             {project.strapi && (
               <div className="z-10 mt-6 flex items-center space-x-2 rounded-lg bg-indigo-50 p-2 text-sm font-medium text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-200">
-                <span>Desarrollado con</span>
+                <span>CMS con</span>
                 <Image
                   src={Strapi}
                   width={20}
