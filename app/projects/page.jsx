@@ -40,7 +40,7 @@ const projects = [
     description:
       'Landing inmobiliario para cliente San Isidro para inscripciones de ofertas para el Black Friday 2024. El sitio se propone como una alternativa a los landings de WordPress del cliente para mejorar la convertibilidad y velocidad más una mejora sustantiva del SEO manual.',
     link: {
-      href: 'https://sanisidro.mtmdigital.cl/inscribete',
+      href: 'https://sanisidro.mtmdigital.cl/black-friday-ventas',
       label: 'San Isidro'
     },
     logo: NextJS,
@@ -48,6 +48,19 @@ const projects = [
     tailwind: false,
     mongodb: true,
     creation: false,
+  },
+  {
+    name: 'EASUR - propuesta web',
+    description: 'Web Inmobiliaria de EASUR que busca consolidar las nuevas tecnologías como NextJS, TailwindCSS y MongoDB con una fluida migración desde WordPress. También se levantará un backend con Strapi para la autogestión de los contenidos por parte de cliente.',
+    link: {
+      href: 'https://nueva-easur.vercel.app',
+      label: 'EASUR Web'
+    },
+    logo: NextJS,
+    production: false,
+    tailwind: true,
+    mongodb: true,
+    creation: true,
   },
   {
     name: 'Retail Financiero - ONG',
