@@ -5,6 +5,7 @@ import NextJS from '@/images/logos/nextjs.svg'
 import Tailwind from '@/images/logos/tailwind.svg'
 import MongoDB from '@/images/logos/mongodb.svg'
 import React from '@/images/logos/reactjs.svg'
+import Strapi from '@/images/logos/strapi.svg'
 
 const projects = [
   {
@@ -20,6 +21,7 @@ const projects = [
     tailwind: true,
     mongodb: true,
     creation: false,
+    strapi: false,
   },
   {
     name: 'Estoril 820 - FDI',
@@ -34,6 +36,7 @@ const projects = [
     tailwind: true,
     mongodb: true,
     creation: false,
+    strapi: false,
   },
   {
     name: 'San Isidro - Landing',
@@ -48,6 +51,7 @@ const projects = [
     tailwind: false,
     mongodb: true,
     creation: false,
+    strapi: false,
   },
   {
     name: 'EASUR - propuesta web',
@@ -61,6 +65,7 @@ const projects = [
     tailwind: true,
     mongodb: true,
     creation: true,
+    strapi: true,
   },
   {
     name: 'Retail Financiero - ONG',
@@ -75,6 +80,7 @@ const projects = [
     tailwind: true,
     mongodb: false,
     creation: false,
+    strapi: true,
   },
   {
     name: 'Landing Barrio Cueto - Urmeneta GI',
@@ -89,6 +95,7 @@ const projects = [
     tailwind: true,
     mongodb: true,
     creation: false,
+    strapi: false,
   },
   {
     name: 'Cyber Molina Morel',
@@ -103,6 +110,7 @@ const projects = [
     tailwind: true,
     mongodb: false,
     creation: false,
+    strapi: false,
   },
   {
     name: 'Avellaneda Constructora',
@@ -117,6 +125,7 @@ const projects = [
     tailwind: true,
     mongodb: true,
     creation: false,
+    strapi: false,
   },
   {
     name: 'Landing Black/Cyber - Inmobiliaria Manquehue',
@@ -131,6 +140,7 @@ const projects = [
     tailwind: false,
     mongodb: true,
     creation: false,
+    strapi: false,
   },
 ]
 
@@ -236,6 +246,21 @@ export default function Projects() {
                 />
                 <span className="font-semibold text-blue-600 dark:text-blue-300">
                   Tailwind UI
+                </span>
+              </div>
+            )}
+            {project.strapi && (
+              <div className="z-10 mt-6 flex items-center space-x-2 rounded-lg bg-indigo-50 p-2 text-sm font-medium text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-200">
+                <span>Desarrollado con</span>
+                <Image
+                  src={Strapi}
+                  width={20}
+                  height={20}
+                  className="inline-block"
+                  alt="Strapi logo"
+                />
+                <span className="font-semibold text-indigo-600 dark:text-indigo-300">
+                  Strapi
                 </span>
               </div>
             )}
