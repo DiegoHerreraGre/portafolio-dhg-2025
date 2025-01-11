@@ -149,11 +149,6 @@ export default function Stack() {
         slug: 'nvm',
         description: 'Gestor de versiones de Node.js',
       },
-      {
-        name: 'Docker-Compose',
-        slug: 'dockercompose',
-        description: 'Definición y ejecución de contenedores Docker',
-      },
     ],
   }
 
@@ -245,7 +240,7 @@ export const Editor = () => {
           <div className="flex flex-col flex-wrap items-center justify-center gap-4">
             <Link href={'https://www.cursor.com'}>
               <Image
-                src="/cursor.jpg"
+                src="/cursor.webp"
                 alt="Cursor icon"
                 width={340}
                 height={340}
@@ -253,7 +248,7 @@ export const Editor = () => {
               />
             </Link>
             <Image
-              src="/cursorimage.jpg"
+              src="/cursorimage.webp"
               alt="Cursor image"
               width={1920}
               height={1080}
@@ -280,7 +275,7 @@ export const Editor = () => {
           <div className="flex flex-col flex-wrap items-center justify-center gap-4">
             <Link href={'https://www.warp.dev'}>
               <Image
-                src="/warp.png"
+                src="/warp.webwwwwwp"
                 alt="Warp icon"
                 width={340}
                 height={340}
