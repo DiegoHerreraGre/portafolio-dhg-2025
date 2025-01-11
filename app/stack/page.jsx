@@ -275,7 +275,7 @@ export const Editor = () => {
           <div className="flex flex-col flex-wrap items-center justify-center gap-4">
             <Link href={'https://www.warp.dev'}>
               <Image
-                src="/warp.webwwwwwp"
+                src="/warp.webp"
                 alt="Warp icon"
                 width={340}
                 height={340}
