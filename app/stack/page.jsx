@@ -51,6 +51,16 @@ export default function Stack() {
         description: 'Lenguaje de programación para desarrollo web',
       },
       {
+        name: 'MySQL',
+        slug: 'mysql',
+        description: 'Sistema de gestión de bases de datos relacionales',
+      },
+      {
+        name: 'Turso',
+        slug: 'turso',
+        description: 'Base de datos SQL en la nube',
+      },
+      {
         name: 'Python',
         slug: 'python',
         description: 'Lenguaje versátil para backend y scripting',
@@ -82,6 +92,17 @@ export default function Stack() {
     ],
     'CMS & SEO': [
       {
+        name: 'Strapi',
+        slug: 'strapi',
+        description:
+          'Sistema de gestión de contenidos novedoso y autohospedado',
+      },
+      {
+        name: 'Docker',
+        slug: 'docker',
+        description: 'Contenedorización de aplicaciones',
+      },
+      {
         name: 'WordPress',
         slug: 'wordpress',
         description: 'Sistema de gestión de contenidos',
@@ -100,6 +121,38 @@ export default function Stack() {
         name: 'Apache',
         slug: 'apache',
         description: 'Servidor web tradicional',
+      },
+    ],
+    'Herramientas de terminal': [
+      {
+        name: 'PM2',
+        slug: 'pm2',
+        description: 'Gestión de procesos en Node.js',
+      },
+      {
+        name: 'Zsh',
+        slug: 'zsh',
+        description: 'Shell interactiva y personalizable',
+      },
+      {
+        name: 'curl',
+        slug: 'curl',
+        description: 'Herramienta de transferencia de datos',
+      },
+      {
+        name: 'Homebrew',
+        slug: 'homebrew',
+        description: 'Gestor de paquetes para macOS',
+      },
+      {
+        name: 'NVM',
+        slug: 'nvm',
+        description: 'Gestor de versiones de Node.js',
+      },
+      {
+        name: 'Docker-Compose',
+        slug: 'dockercompose',
+        description: 'Definición y ejecución de contenedores Docker',
       },
     ],
   }

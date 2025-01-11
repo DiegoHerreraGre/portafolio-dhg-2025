@@ -13,9 +13,9 @@ import {
 
 import logoUAH from '@/images/logos/logo-uah.svg'
 import logoMTM from '@/images/logos/logo-mtm.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import image2 from '@/images/photos/image-2.webp'
+import image4 from '@/images/photos/image-4.webp'
+import image5 from '@/images/photos/image-5.webp'
 import { getAllArticles } from '@/lib/articles'
 import Pricing from '@/components/Pricing'
 

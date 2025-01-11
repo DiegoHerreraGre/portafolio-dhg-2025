@@ -6,6 +6,8 @@ import Tailwind from '@/images/logos/tailwind.svg'
 import MongoDB from '@/images/logos/mongodb.svg'
 import React from '@/images/logos/reactjs.svg'
 import Strapi from '@/images/logos/strapi.svg'
+import PHP from '@/images/logos/php.svg'
+import WordPress from '@/images/logos/wordpress.svg'
 
 const projects = [
   {
@@ -22,6 +24,7 @@ const projects = [
     mongodb: true,
     creation: false,
     strapi: false,
+    wordpress: false,
   },
   {
     name: 'Estoril 820 - FDI',
@@ -37,6 +40,7 @@ const projects = [
     mongodb: true,
     creation: false,
     strapi: false,
+    wordpress: false,
   },
   {
     name: 'San Isidro - Landing',
@@ -54,12 +58,12 @@ const projects = [
     strapi: false,
   },
   {
-    name: 'EASUR - propuesta web',
+    name: 'Andrés Herrera Gré',
     description:
-      'Web Inmobiliaria de EASUR que busca consolidar las nuevas tecnologías como NextJS, TailwindCSS y MongoDB con una fluida migración desde WordPress. También se levantará un backend con Strapi para la autogestión de los contenidos por parte de cliente.',
+      'Propuesta de sitio web para psicólogo Andrés Herrera Gré, quien busca expandir su presencia en el mercado y ofrecer servicios de psicoterapia a través de una plataforma moderna y accesible.',
     link: {
-      href: 'https://nueva-easur.vercel.app',
-      label: 'EASUR Web',
+      href: 'https://www.andresherreragre.cl',
+      label: 'Andrés Herrera Gré',
     },
     logo: NextJS,
     production: false,
@@ -67,21 +71,23 @@ const projects = [
     mongodb: true,
     creation: true,
     strapi: true,
+    wordpress: false,
   },
   {
     name: 'Retail Financiero - ONG',
     description:
       'Diseño y desarrollo de la nueva web con propuesta de CMS en el backend para Retail Financiero, una plataforma dedicada a ofrecer asesoramiento financiero especializado en el mercado de retail en Chile. La web proporciona recursos y herramientas para ayudar a los usuarios a tomar decisiones financieras informadas y efectivas.',
     link: {
-      href: 'https://www.retailfinanciero.vercel.app',
+      href: 'https://nuevo.www.retailfinanciero.cl',
       label: 'Retail Financiero',
     },
-    logo: NextJS,
+    logo: PHP,
     production: false,
     tailwind: true,
     mongodb: false,
     creation: false,
-    strapi: true,
+    strapi: false,
+    wordpress: true,
   },
   {
     name: 'Landing Barrio Cueto - Urmeneta GI',
@@ -118,15 +124,16 @@ const projects = [
     description:
       'Plataforma web especializada en servicio post venta para Avellaneda Constructora. Diseñada para facilitar el seguimiento de reparaciones, mantenimiento y atención al cliente después de la entrega de propiedades. Incluye sistema de tickets, seguimiento en tiempo real del estado de solicitudes y comunicación directa con el equipo de post venta',
     link: {
-      href: 'https://www.avellaneda.vercel.app',
+      href: 'https://www.preproduccion.mtmdigital.cl',
       label: 'Avellaneda Constructora',
     },
-    logo: NextJS,
-    production: false,
+    logo: PHP,
+    production: true,
     tailwind: true,
-    mongodb: true,
+    mongodb: false,
     creation: false,
     strapi: false,
+    wordpress: true,
   },
   {
     name: 'Landing Black/Cyber - Inmobiliaria Manquehue',
@@ -262,6 +269,21 @@ export default function Projects() {
                 />
                 <span className="font-semibold text-indigo-600 dark:text-indigo-300">
                   Strapi
+                </span>
+              </div>
+            )}
+            {project.wordpress && (
+              <div className="items-cente z-10 mt-6 flex space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
+                <span>CMS con</span>
+                <Image
+                  src={WordPress}
+                  width={20}
+                  height={20}
+                  className="inline-block"
+                  alt="WordPress logo"
+                />
+                <span className="font-semibold text-green-600 dark:text-green-300">
+                  WordPress
                 </span>
               </div>
             )}
