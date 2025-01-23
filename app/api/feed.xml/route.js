@@ -1,6 +1,7 @@
 import assert from 'assert'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
+import PermisionMiddleware from '@/middlewares/permisions.middlewares'
 
 export async function GET(req) {
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
@@ -67,4 +68,28 @@ export async function GET(req) {
       'cache-control': 's-maxage=31556952',
     },
   })
+}
+
+export async function POST(request) {
+  return await PermisionMiddleware(request)
+}
+
+export async function PUT(request) {
+  return await PermisionMiddleware(request)
+}
+
+export async function DELETE(request) {
+  return await PermisionMiddleware(request)
+}
+
+export async function PATCH(request) {
+  return await PermisionMiddleware(request)
+}
+
+export async function OPTIONS(request) {
+  return await PermisionMiddleware(request)
+}
+
+export async function HEAD(request) {
+  return await PermisionMiddleware(request)
 }

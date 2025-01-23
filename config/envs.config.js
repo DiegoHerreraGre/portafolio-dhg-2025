@@ -1,6 +1,4 @@
-import dotenv from 'dotenv'
-
-dotenv.config()
+process.loadEnvFile()
 
 const envs = {
   MTM_MAIL_PERSONAL: process.env.MTM_MAIL_PERSONAL,

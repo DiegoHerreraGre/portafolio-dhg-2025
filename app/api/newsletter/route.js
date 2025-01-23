@@ -5,8 +5,13 @@ import { NewsletterDTO } from '../../../dto/newsletter.dto'
 import { NewsletterDAO } from '../../../dao/newsletter.dao'
 import sendEmail from '@/services/email.service'
 import envs from '@/config/envs.config'
+import PermisionMiddleware from '@/middlewares/permisions.middlewares'
 
 const { MTM_MAIL_PERSONAL } = envs
+
+export async function GET(request) {
+  return PermisionMiddleware(request)
+}
 
 export async function POST(request) {
   try {
@@ -143,4 +148,24 @@ export async function POST(request) {
       },
     )
   }
+}
+
+export async function PUT(request) {
+  return PermisionMiddleware(request)
+}
+
+export async function DELETE(request) {
+  return PermisionMiddleware(request)
+}
+
+export async function PATCH(request) {
+  return PermisionMiddleware(request)
+}
+
+export async function OPTIONS(request) {
+  return PermisionMiddleware(request)
+}
+
+export async function HEAD(request) {
+  return PermisionMiddleware(request)
 }
