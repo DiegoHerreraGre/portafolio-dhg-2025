@@ -1,8 +1,13 @@
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 import { Inter } from 'next/font/google'
-
+import dotenv from 'dotenv'
+import envs from '@/config/envs.config'
 import '@/styles/tailwind.css'
+
+dotenv.config()
+
+let { NEXT_PUBLIC_SITE_URL } = envs
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,14 +40,14 @@ export const metadata = {
   authors: [
     {
       name: 'Diego Herrera Gre',
-      url: 'https://tunombre.com',
+      url: 'https://www.diegoherreragre.dev',
     },
   ],
   creator: 'Diego Herrera Gre',
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: process.env.NEXT_PUBLIC_SITE_URL,
+    url: NEXT_PUBLIC_SITE_URL,
     title: 'Diego Herrera Gre - Desarrollador Full Stack & Diseñador Web',
     description:
       'Portafolio profesional con proyectos y experiencia en desarrollo web',
@@ -50,7 +55,7 @@ export const metadata = {
   },
   alternates: {
     types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/api/feed.xml`,
+      'application/rss+xml': `${NEXT_PUBLIC_SITE_URL}/api/feed.xml`,
     },
   },
 }
@@ -76,7 +81,7 @@ export default function RootLayout({ children }) {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_SITE_URL} />
+        <meta property="og:url" content={NEXT_PUBLIC_SITE_URL} />
         <meta
           property="og:title"
           content="Diego Herrera Gre - Desarrollador Full Stack & Diseñador Web | Experto en React, Next.js"
@@ -87,7 +92,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_SITE_URL}/og_image.webp`}
+          content={`${NEXT_PUBLIC_SITE_URL}/og_image.webp`}
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -98,7 +103,7 @@ export default function RootLayout({ children }) {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={process.env.NEXT_PUBLIC_SITE_URL} />
+        <meta name="twitter:url" content={NEXT_PUBLIC_SITE_URL} />
         <meta name="twitter:creator" content="@diegoherreragre" />
         <meta
           name="twitter:title"
@@ -110,7 +115,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="twitter:image"
-          content={`${process.env.NEXT_PUBLIC_SITE_URL}/og_twitter.webp`}
+          content={`${NEXT_PUBLIC_SITE_URL}/og_twitter.webp`}
         />
         <meta
           name="twitter:image:alt"
@@ -130,7 +135,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* Favicon y PWA */}
-        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
+        <link rel="canonical" href={NEXT_PUBLIC_SITE_URL} />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
