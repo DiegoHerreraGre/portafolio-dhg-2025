@@ -2,6 +2,9 @@ import assert from 'assert'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
 import PermisionMiddleware from '@/middlewares/permisions.middlewares'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export async function GET(req) {
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
@@ -17,7 +20,7 @@ export async function GET(req) {
 
   let feed = new Feed({
     title: author.name,
-    description: 'Your blog description',
+    description: 'Lee mis últimas publicaciones en mi blog personal',
     author,
     id: siteUrl,
     link: siteUrl,
