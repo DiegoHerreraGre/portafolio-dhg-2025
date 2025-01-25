@@ -44,6 +44,9 @@ export default function About() {
               height={1320}
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              loading="lazy"
+              placeholder="blur"
+              quality={75}
             />
           </div>
         </div>
@@ -91,7 +94,7 @@ export default function About() {
               Estas son algunas de mis listas de reproducción favoritas
             </p>
             <ul className="mt-6 space-y-4">
-              <li className="transform transition-all hover:rotate-1 hover:scale-105">
+              <li className="transform transition-all hover:scale-105 hover:rotate-1">
                 <a
                   href="https://open.spotify.com/playlist/6Hl4HtEsBbE72iTCRrtHPZ?si=a56d170ba3ab46eb"
                   className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
@@ -104,7 +107,7 @@ export default function About() {
                   </span>
                 </a>
               </li>
-              <li className="transform transition-all hover:rotate-1 hover:scale-105">
+              <li className="transform transition-all hover:scale-105 hover:rotate-1">
                 <a
                   href="https://open.spotify.com/playlist/7rwf3YJPSzIuu4mh3JI7Ow?si=b5b6710a5eac4ffd"
                   className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
@@ -117,7 +120,7 @@ export default function About() {
                   </span>
                 </a>
               </li>
-              <li className="transform transition-all hover:rotate-1 hover:scale-105">
+              <li className="transform transition-all hover:scale-105 hover:rotate-1">
                 <a
                   href="https://open.spotify.com/playlist/7eMu1fmkKxbfCeGIeapp99?si=26cebc6f2f4d43c6"
                   className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
