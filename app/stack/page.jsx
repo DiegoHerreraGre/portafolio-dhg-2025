@@ -167,7 +167,7 @@ export default function Stack() {
     ].includes(slug)
 
     return (
-      <div className="relative mr-3 h-6 w-6">
+      <div className="relative w-6 h-6 mr-3">
         <Image
           src={`https://cdn.simpleicons.org/${slug}`}
           alt={`${name} icon`}
@@ -183,21 +183,21 @@ export default function Stack() {
   }
 
   return (
-    <div className="mx-auto mt-12 w-full max-w-4xl p-6">
-      <h2 className="mb-8 text-center text-6xl font-bold">Stack Tecnológico</h2>
+    <div className="w-full max-w-4xl p-6 mx-auto mt-12">
+      <h2 className="mb-8 text-6xl font-bold text-center">Stack Tecnológico</h2>
       <div className="space-y-8">
         <Editor />
         {Object.entries(techCategories).map(([category, technologies]) => (
-          <div key={category} className="rounded-lg bg-white/5 p-6">
+          <div key={category} className="p-6 rounded-lg bg-white/5">
             <h3 className="mb-4 text-xl font-semibold">{category}</h3>
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-700">
                 <thead>
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-800 uppercase dark:text-gray-200">
                       Tecnología
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-800 uppercase dark:text-gray-200">
                       Descripción
                     </th>
                   </tr>
@@ -208,7 +208,7 @@ export default function Stack() {
                       key={tech.slug}
                       className="transition-colors hover:bg-white/5"
                     >
-                      <td className="whitespace-nowrap px-6 py-4">
+                      <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           <TechIcon slug={tech.slug} name={tech.name} />
                           <span>{tech.name}</span>
@@ -233,93 +233,63 @@ export default function Stack() {
 
 export const Editor = () => {
   return (
-    <div className="mx-auto mt-12 w-full max-w-4xl p-6">
-      <h2 className="mb-8 text-center text-3xl font-bold">
-        Integrated Developer Enviorment (IDE)
+    <div className="w-full max-w-4xl p-6 mx-auto mt-12">
+      <h2 className="mb-8 text-3xl font-bold text-center">
+        Cursor: El IDE del Futuro
       </h2>
       <div className="space-y-8">
-        <div className="rounded-lg bg-white/5 p-6">
+        <div className="p-6 rounded-lg bg-white/5">
           <div className="flex flex-col flex-wrap items-center justify-center gap-4">
-            <Link href={'https://www.jetbrains.com'}>
+            <Link href={'https://www.cursor.com'}>
               <Image
-                src="/jetbrains-logo.webp"
-                alt="JetBrains icon"
+                src="/cursor.webp"
+                alt="Cursor icon"
                 width={340}
                 height={340}
-                className="my-12 mr-3"
+                className="my-12 mr-3 transition-transform hover:scale-105"
               />
             </Link>
-            <Image
-              src="/jetbrains-fondo.webp"
-              alt="JetBrains image"
-              width={1920}
-              height={1080}
-              className="rounded-2xl"
-            />
-            <div className="mx-auto my-12 max-w-7xl p-6">
-              <h2 className="mb-6 text-center text-4xl font-bold text-gray-800 dark:text-gray-200">
-                Ecosistema JetBrains
-              </h2>
-              <div className="space-y-6 text-gray-800 dark:text-gray-200">
-                <p className="text-justify">
-                  JetBrains ofrece un ecosistema de herramientas de desarrollo
-                  diseñadas para potenciar al máximo la productividad y
-                  creatividad de los desarrolladores. Su enfoque combina
-                  inteligencia artificial, automatización inteligente y un
-                  desempeño optimizado que redefine cómo los profesionales
-                  abordan el desarrollo de software.
+            <div className="p-6 mx-auto my-12 max-w-7xl">
+              <Image
+                src="/cursorimage.webp"
+                alt="Cursor image"
+                width={1920}
+                height={1080}
+                className="transition-shadow shadow-lg rounded-2xl hover:shadow-xl"
+              />
+              <div className="mt-8 space-y-4">
+                <p className="text-justify text-gray-800 dark:text-gray-200">
+                  Cursor representa la evolución de los entornos de desarrollo,
+                  combinando la familiaridad de Visual Studio Code con mejoras
+                  revolucionarias en rendimiento y eficiencia. Su arquitectura
+                  optimizada permite un flujo de trabajo fluido, incluso en
+                  proyectos de gran escala.
                 </p>
-                <p className="text-justify">
-                  Desde editores de código innovadores hasta herramientas
-                  avanzadas de colaboración, cada producto de JetBrains está
-                  diseñado con atención al detalle para adaptarse perfectamente
-                  a las necesidades de cada lenguaje y flujo de trabajo.
+                <p className="text-justify text-gray-800 dark:text-gray-200">
+                  Con un consumo de recursos significativamente menor que su
+                  predecesor, Cursor ofrece tiempos de respuesta instantáneos y
+                  una experiencia de desarrollo sin interrupciones. Su motor de
+                  renderizado optimizado elimina la sobrecarga típica de los
+                  editores basados en web, proporcionando un entorno
+                  verdaderamente nativo.
                 </p>
-                <ul className="list-disc space-y-2 pl-6">
-                  <li>
-                    <span className="font-semibold">
-                      Interfaz Inteligente y Fluida:
-                    </span>{' '}
-                    Entornos que entienden el flujo de trabajo, sugiriendo e
-                    implementando soluciones de manera proactiva.
-                  </li>
-                  <li>
-                    <span className="font-semibold">
-                      Soporte Multiplataforma:
-                    </span>{' '}
-                    Compatibilidad en Mac, Windows y Linux, permitiendo trabajar
-                    sin limitaciones.
-                  </li>
-                  <li>
-                    <span className="font-semibold">
-                      Depuración y Refactorización Impecables:
-                    </span>{' '}
-                    Herramientas líderes ideales para optimizar código sin
-                    esfuerzo.
-                  </li>
-                  <li>
-                    <span className="font-semibold">Integración Continua:</span>{' '}
-                    Conectividad perfecta con sistemas de control de versiones y
-                    plataformas DevOps.
-                  </li>
-                </ul>
-                <p className="text-justify">
-                  Herramientas como{' '}
-                  <span className="font-semibold">PhpStorm</span>,{' '}
-                  <span className="font-semibold">WebStorm</span>,{' '}
-                  <span className="font-semibold">PyCharm</span>, y muchas más,
-                  convierten a JetBrains en el entorno preferido por
-                  desarrolladores de todos los niveles, abordando tanto
-                  aplicaciones web como móviles, backend y más.
+                <p className="text-justify text-gray-800 dark:text-gray-200">
+                  Más que un simple editor, Cursor integra herramientas
+                  avanzadas de inteligencia artificial que asisten en la
+                  escritura de código, detección de errores y optimización de
+                  rendimiento. Su interfaz minimalista y altamente
+                  personalizable se adapta a las necesidades de cada
+                  desarrollador, ofreciendo una experiencia verdaderamente
+                  personalizada.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 className="my-8 text-center text-3xl font-bold">Terminal</h2>
+      <h2 className="my-8 text-3xl font-bold text-center">Terminal</h2>
       <div className="space-y-8">
-        <div className="rounded-lg bg-white/5 p-6">
+        <div className="p-6 rounded-lg bg-white/5">
           <div className="flex flex-col flex-wrap items-center justify-center gap-4">
             <Link href={'https://www.warp.dev'}>
               <Image
@@ -335,7 +305,7 @@ export const Editor = () => {
               alt="Warp image"
               width={1920}
               height={1080}
-              className="mb-12 rounded-2xl shadow-2xl"
+              className="mb-12 shadow-2xl rounded-2xl"
             />
             <p className="text-justify text-gray-800 dark:text-gray-200">
               Warp es una terminal de nueva generación que redefine la forma en
