@@ -1,20 +1,17 @@
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
-import { Inter } from 'next/font/google'
-import dotenv from 'dotenv'
+import { Ubuntu } from 'next/font/google'
 import envs from '@/config/envs.config'
 import '@/styles/tailwind.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-dotenv.config()
-
 let { NEXT_PUBLIC_SITE_URL } = envs
 
-const inter = Inter({
+const ubuntu = Ubuntu({
   subsets: ['latin'],
   display: 'swap',
-  weights: [400, 500, 600, 700],
+  weight: ['300', '400', '700'],
 })
 
 export const metadata = {
@@ -66,7 +63,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="es"
-      className={`h-full antialiased ${inter.className}`}
+      className={`h-full antialiased ${ubuntu.className}`}
       suppressHydrationWarning
     >
       <head>
