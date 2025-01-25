@@ -234,38 +234,86 @@ export default function Stack() {
 export const Editor = () => {
   return (
     <div className="mx-auto mt-12 w-full max-w-4xl p-6">
-      <h2 className="mb-8 text-center text-3xl font-bold">Editor de Código</h2>
+      <h2 className="mb-8 text-center text-3xl font-bold">
+        Integrated Developer Enviorment (IDE)
+      </h2>
       <div className="space-y-8">
         <div className="rounded-lg bg-white/5 p-6">
           <div className="flex flex-col flex-wrap items-center justify-center gap-4">
-            <Link href={'https://www.cursor.com'}>
+            <Link href={'https://www.jetbrains.com'}>
               <Image
-                src="/cursor.webp"
-                alt="Cursor icon"
+                src="/jetbrains-logo.webp"
+                alt="JetBrains icon"
                 width={340}
                 height={340}
-                className="my-12 mr-3 dark:invert"
+                className="my-12 mr-3"
               />
             </Link>
             <Image
-              src="/cursorimage.webp"
-              alt="Cursor image"
+              src="/jetbrains-fondo.webp"
+              alt="JetBrains image"
               width={1920}
               height={1080}
               className="rounded-2xl"
             />
-            <p className="text-justify text-gray-800 dark:text-gray-200">
-              Cursor es un editor de código con una interfaz intuitiva, soporte
-              para múltiples lenguajes de programación y herramientas avanzadas
-              de depuración. Su rendimiento excepcional permite a los
-              desarrolladores trabajar de manera eficiente y sin interrupciones.
-            </p>
-            <p className="text-justify text-gray-800 dark:text-gray-200">
-              Construido como un fork de Visual Studio Code, Cursor no solo es
-              extremadamente rápido, sino que también consume muy poca memoria
-              en comparación con Visual Studio Code, que al estar basado en
-              JavaScript, funciona como un navegador web abierto.
-            </p>
+            <div className="mx-auto my-12 max-w-7xl p-6">
+              <h2 className="mb-6 text-center text-4xl font-bold text-gray-800 dark:text-gray-200">
+                Ecosistema JetBrains
+              </h2>
+              <div className="space-y-6 text-gray-800 dark:text-gray-200">
+                <p className="text-justify">
+                  JetBrains ofrece un ecosistema de herramientas de desarrollo
+                  diseñadas para potenciar al máximo la productividad y
+                  creatividad de los desarrolladores. Su enfoque combina
+                  inteligencia artificial, automatización inteligente y un
+                  desempeño optimizado que redefine cómo los profesionales
+                  abordan el desarrollo de software.
+                </p>
+                <p className="text-justify">
+                  Desde editores de código innovadores hasta herramientas
+                  avanzadas de colaboración, cada producto de JetBrains está
+                  diseñado con atención al detalle para adaptarse perfectamente
+                  a las necesidades de cada lenguaje y flujo de trabajo.
+                </p>
+                <ul className="list-disc space-y-2 pl-6">
+                  <li>
+                    <span className="font-semibold">
+                      Interfaz Inteligente y Fluida:
+                    </span>{' '}
+                    Entornos que entienden el flujo de trabajo, sugiriendo e
+                    implementando soluciones de manera proactiva.
+                  </li>
+                  <li>
+                    <span className="font-semibold">
+                      Soporte Multiplataforma:
+                    </span>{' '}
+                    Compatibilidad en Mac, Windows y Linux, permitiendo trabajar
+                    sin limitaciones.
+                  </li>
+                  <li>
+                    <span className="font-semibold">
+                      Depuración y Refactorización Impecables:
+                    </span>{' '}
+                    Herramientas líderes ideales para optimizar código sin
+                    esfuerzo.
+                  </li>
+                  <li>
+                    <span className="font-semibold">Integración Continua:</span>{' '}
+                    Conectividad perfecta con sistemas de control de versiones y
+                    plataformas DevOps.
+                  </li>
+                </ul>
+                <p className="text-justify">
+                  Herramientas como{' '}
+                  <span className="font-semibold">PhpStorm</span>,{' '}
+                  <span className="font-semibold">WebStorm</span>,{' '}
+                  <span className="font-semibold">PyCharm</span>, y muchas más,
+                  convierten a JetBrains en el entorno preferido por
+                  desarrolladores de todos los niveles, abordando tanto
+                  aplicaciones web como móviles, backend y más.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -290,13 +338,21 @@ export const Editor = () => {
               className="mb-12 rounded-2xl shadow-2xl"
             />
             <p className="text-justify text-gray-800 dark:text-gray-200">
-              Warp es una terminal que busca mejorar la experiencia de los
-              programadores incluyendo características como autocompletado,
-              resaltado de sintaxis y una UI/UX amigable.
+              Warp es una terminal de nueva generación que redefine la forma en
+              que los desarrolladores interactúan con su consola. Diseñada para
+              maximizar la productividad, incluye características únicas como
+              autocompletado inteligente en tiempo real, resaltado de sintaxis
+              avanzado y una interfaz moderna e intuitiva que facilita el flujo
+              de trabajo.
             </p>
             <p className="text-justify text-gray-800 dark:text-gray-200">
-              Al igual que Zed, Warp está construido en Rust, lo que le permite
-              ser extremadamente rápido y eficiente en el uso de recursos.
+              Construida con Rust, Warp combina un rendimiento sobresaliente con
+              eficiencia en el uso de recursos, ofreciendo tiempos de respuesta
+              instantáneos y una experiencia fluida incluso en los proyectos más
+              demandantes. Además, integra herramientas colaborativas y
+              funcionalidades adaptadas a las necesidades de los equipos
+              modernos, posicionándola como una herramienta imprescindible para
+              desarrolladores que buscan innovación y eficiencia.
             </p>
           </div>
         </div>

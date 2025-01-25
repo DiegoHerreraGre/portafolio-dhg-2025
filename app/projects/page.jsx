@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import {Card} from '@/components/Card'
-import {SimpleLayout} from '@/components/SimpleLayout'
+import { Card } from '@/components/Card'
+import { SimpleLayout } from '@/components/SimpleLayout'
 import NextJS from '@/images/logos/nextjs.svg'
 import Tailwind from '@/images/logos/tailwind.svg'
 import MongoDB from '@/images/logos/mongodb.svg'
@@ -20,6 +20,22 @@ const projects = [
     },
     logo: NextJS,
     production: true,
+    tailwind: true,
+    mongodb: true,
+    creation: false,
+    strapi: false,
+    wordpress: false,
+  },
+  {
+    name: 'MTM Diseño y Publicidad',
+    description:
+      'Nuevo sitio web para MTM basado en Next JS y Node JS en el backend, como una propuesta para innovar la imagen, con un pequeño rebranding del logo, una mejor interactividad con el cliente, grandes mejoras en la UI/UX, y ante todo, la propuesta para levantar nuevas webs usando las herramientas de la actualidad',
+    link: {
+      href: 'https://www.mtmweb.vercel.app',
+      label: 'MTM',
+    },
+    logo: NextJS,
+    production: false,
     tailwind: true,
     mongodb: true,
     creation: false,
@@ -180,8 +196,7 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div
-              className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-white dark:ring-0">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-white dark:ring-0">
               <Image
                 width={32}
                 height={32}
@@ -197,8 +212,7 @@ export default function Projects() {
             <Card.Description>{project.description}</Card.Description>
             {!project.production && !project.creation && (
               <div className="z-10 mt-6 flex items-center justify-center">
-                <span
-                  className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-100 px-4 py-1 text-sm font-medium text-yellow-800 dark:border-yellow-700/50 dark:bg-yellow-900/30 dark:text-yellow-300">
+                <span className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-100 px-4 py-1 text-sm font-medium text-yellow-800 dark:border-yellow-700/50 dark:bg-yellow-900/30 dark:text-yellow-300">
                   <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M12 16V12L14 14M12 8V8.01M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
@@ -214,8 +228,7 @@ export default function Projects() {
             )}
             {project.production && (
               <div className="z-10 mt-6 flex items-center justify-center">
-                <span
-                  className="inline-flex items-center rounded-full border border-green-200 bg-green-100 px-4 py-1 text-sm font-medium text-green-800 dark:border-green-700/50 dark:bg-green-900/30 dark:text-green-300">
+                <span className="inline-flex items-center rounded-full border border-green-200 bg-green-100 px-4 py-1 text-sm font-medium text-green-800 dark:border-green-700/50 dark:bg-green-900/30 dark:text-green-300">
                   <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
@@ -231,8 +244,7 @@ export default function Projects() {
             )}
             {!project.production && project.creation && (
               <div className="z-10 mt-6 flex items-center justify-center">
-                <span
-                  className="inline-flex items-center rounded-full border border-pink-200 bg-pink-100 px-4 py-1 text-sm font-medium text-pink-800 dark:border-pink-700/50 dark:bg-pink-900/30 dark:text-pink-300">
+                <span className="inline-flex items-center rounded-full border border-pink-200 bg-pink-100 px-4 py-1 text-sm font-medium text-pink-800 dark:border-pink-700/50 dark:bg-pink-900/30 dark:text-pink-300">
                   <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M2 21l1.5-1.5L8 15l-1.5-1.5L2 18v3zm2-2l1.5-1.5L8 13l-1.5-1.5L4 17v2zm2-2l1.5-1.5L8 11l-1.5-1.5L6 15v1zm2-2l1.5-1.5L8 9l-1.5-1.5L8 13v-1zm2-2l1.5-1.5L8 7l-1.5-1.5L10 11V9zm2-2l1.5-1.5L8 5l-1.5-1.5L12 9V7zm2-2l1.5-1.5L8 3l-1.5-1.5L14 7V5zm2-2l1.5-1.5L8 1l-1.5-1.5L16 5V3zm2-2l1.5-1.5L8 0l-1.5-1.5L18 3V1z"
@@ -247,8 +259,7 @@ export default function Projects() {
               </div>
             )}
             {project.tailwind && (
-              <div
-                className="z-10 mt-6 flex items-center space-x-2 rounded-lg bg-blue-50 p-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
+              <div className="z-10 mt-6 flex items-center space-x-2 rounded-lg bg-blue-50 p-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
                 <span>Desarrollado con</span>
                 <Image
                   src={Tailwind}
@@ -263,8 +274,7 @@ export default function Projects() {
               </div>
             )}
             {project.strapi && (
-              <div
-                className="z-10 mt-6 flex items-center space-x-2 rounded-lg bg-indigo-50 p-2 text-sm font-medium text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-200">
+              <div className="z-10 mt-6 flex items-center space-x-2 rounded-lg bg-indigo-50 p-2 text-sm font-medium text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-200">
                 <span>CMS con</span>
                 <Image
                   src={Strapi}
@@ -279,8 +289,7 @@ export default function Projects() {
               </div>
             )}
             {project.wordpress && (
-              <div
-                className="items-cente z-10 mt-6 flex space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
+              <div className="items-cente z-10 mt-6 flex space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
                 <span>CMS con</span>
                 <Image
                   src={WordPress}
@@ -295,8 +304,7 @@ export default function Projects() {
               </div>
             )}
             {project.mongodb && (
-              <div
-                className="items-cente z-10 mt-6 flex space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
+              <div className="items-cente z-10 mt-6 flex space-x-2 rounded-lg bg-green-50 p-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
                 <span>Bases de datos con</span>
                 <Image
                   src={MongoDB}
@@ -310,9 +318,8 @@ export default function Projects() {
                 </span>
               </div>
             )}
-            <p
-              className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none"/>
+            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">{project.link.label}</span>
             </p>
           </Card>
