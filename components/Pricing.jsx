@@ -122,7 +122,7 @@ export default function Pricing() {
               key={tier.id}
               className={classNames(
                 tier.mostPopular
-                  ? 'transition-all duration-300 hover:scale-110 lg:z-10 lg:rounded-[2rem] hover:lg:rounded-[5.5rem]'
+                  ? 'transition-all duration-300 hover:scale-110 lg:z-10 lg:rounded-[2rem] lg:hover:rounded-[5.5rem]'
                   : 'lg:mt-8',
                 tierIdx === 0
                   ? 'lg:rounded-bl-[1rem] lg:rounded-tr-[2rem]'
