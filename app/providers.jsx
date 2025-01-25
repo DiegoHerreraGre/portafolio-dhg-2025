@@ -3,6 +3,7 @@
 import { createContext, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { ThemeProvider, useTheme } from 'next-themes'
+import RecaptchaProvider from '@/components/RecaptchaProvider'
 
 function usePrevious(value) {
   let ref = useRef()
@@ -48,7 +49,7 @@ export function Providers({ children }) {
     <AppContext.Provider value={{ previousPathname }}>
       <ThemeProvider attribute="class" disableTransitionOnChange>
         <ThemeWatcher />
-        {children}
+        <RecaptchaProvider>{children}</RecaptchaProvider>
       </ThemeProvider>
     </AppContext.Provider>
   )

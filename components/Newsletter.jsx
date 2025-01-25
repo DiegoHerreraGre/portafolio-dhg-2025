@@ -3,9 +3,12 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/Button'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+import { verifyRecaptcha } from '@/config/recaptcha.config'
 
 function Newsletter() {
   const router = useRouter()
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [status, setStatus] = useState({
     message: '',
     success: false,
@@ -17,6 +20,18 @@ function Newsletter() {
     setStatus({ ...status, loading: true })
 
     try {
+      if (!executeRecaptcha) {
+        console.error('Execute recaptcha not yet available')
+        return
+      }
+
+      const token = await executeRecaptcha('form_submit')
+      const isVerified = await verifyRecaptcha(token)
+
+      if (!isVerified) {
+        throw new Error('Verificación de reCAPTCHA fallida')
+      }
+
       const formData = new FormData(e.target)
       const response = await fetch('/api/newsletter', {
         method: 'POST',
@@ -52,31 +67,31 @@ function Newsletter() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3 uppercase tracking-wider">
+        <MailIcon className="flex-none w-6 h-6" />
+        <span className="ml-3 tracking-wider uppercase">
           ¡Contáctate conmigo!
         </span>
       </h2>
       <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
         Contáctate para recibir información sobre mis servicios y promociones.
       </p>
-      <div className="mt-6 flex flex-col gap-4">
+      <div className="flex flex-col gap-4 mt-6">
         <input
           type="email"
           name="email"
           placeholder="Email"
           aria-label="Email"
           required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-hidden focus:ring-4 focus:ring-teal-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
         />
         <select
           name="selectOption"
           id="selectOption"
           required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] text-zinc-900 shadow-md shadow-zinc-800/5 focus:border-teal-500 focus:outline-hidden focus:ring-4 focus:ring-teal-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(--spacing(2)-1px)] text-zinc-900 shadow-md shadow-zinc-800/5 focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 focus:outline-hidden sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
         >
           <option value="default">Seleccione una opción</option>
           <option value="Quiero cotizar un desarrollo web">

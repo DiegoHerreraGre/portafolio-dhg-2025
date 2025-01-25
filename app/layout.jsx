@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google'
 import dotenv from 'dotenv'
 import envs from '@/config/envs.config'
 import '@/styles/tailwind.css'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 dotenv.config()
 
@@ -168,6 +170,8 @@ export default function RootLayout({ children }) {
         <meta name="rating" content="general" />
       </head>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
+        <Analytics />
+        <SpeedInsights />
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>

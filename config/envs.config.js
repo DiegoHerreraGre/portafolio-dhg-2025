@@ -8,6 +8,8 @@ const envs = {
   MTM_PASSWORD: process.env.MTM_PASSWORD,
   MONGO_URI: process.env.MONGO_URI,
   NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+  NEXT_PUBLIC_RECAPTCHA_KEY: process.env.NEXT_PUBLIC_RECAPTCHA_KEY,
+  RECAPTCHA_SECRET_KEY: process.env.RECAPTCHA_SECRET_KEY,
 }
 
 export default envs
