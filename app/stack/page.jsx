@@ -177,6 +177,7 @@ export default function Stack() {
           onError={handleImageError}
           unoptimized // Usar esto para imágenes externas pequeñas
           loading="lazy"
+          quality={75}
         />
       </div>
     )
@@ -246,6 +247,8 @@ export const Editor = () => {
                 alt="Cursor icon"
                 width={340}
                 height={340}
+                quality={75}
+                loading="lazy"
                 className="my-12 mr-3 transition-transform hover:scale-105"
               />
             </Link>
@@ -255,6 +258,8 @@ export const Editor = () => {
                 alt="Cursor image"
                 width={1920}
                 height={1080}
+                quality={75}
+                loading="lazy"
                 className="transition-shadow shadow-lg rounded-2xl hover:shadow-xl"
               />
               <div className="mt-8 space-y-4">
@@ -297,6 +302,8 @@ export const Editor = () => {
                 alt="Warp icon"
                 width={340}
                 height={340}
+                quality={75}
+                loading="lazy"
                 className="my-12 mr-3"
               />
             </Link>
@@ -305,6 +312,8 @@ export const Editor = () => {
               alt="Warp image"
               width={1920}
               height={1080}
+              quality={75}
+              loading="lazy"
               className="mb-12 shadow-2xl rounded-2xl"
             />
             <p className="text-justify text-gray-800 dark:text-gray-200">

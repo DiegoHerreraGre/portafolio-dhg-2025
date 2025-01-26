@@ -16,9 +16,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="flex text-sm font-medium transition group text-zinc-800 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="flex-none w-6 h-6 transition fill-zinc-500 group-hover:fill-teal-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -43,7 +43,7 @@ export default function About() {
               width={1320}
               height={1320}
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="object-cover aspect-square rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
               loading="lazy"
               placeholder="blur"
               quality={75}
@@ -55,7 +55,7 @@ export default function About() {
             Soy Diego Herrera, un desarrollador apasionado por crear soluciones
             tecnológicas.
           </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400">
             <p>
               Mi fascinación por la tecnología comenzó en mi infancia, cuando
               tuve mi primera computadora con Windows 98. Pasaba horas
@@ -85,21 +85,27 @@ export default function About() {
               especialmente Bash.
             </p>
           </div>
-          <article className="mt-12 rounded-xl bg-zinc-50 p-6 shadow-lg dark:bg-zinc-800/50">
-            <h4 className="flex flex-row justify-stretch gap-4 text-3xl font-bold text-zinc-800 dark:text-zinc-100">
+          <article className="p-6 mt-12 shadow-lg rounded-xl bg-zinc-50 dark:bg-zinc-800/50">
+            <h4 className="flex flex-row gap-4 text-3xl font-bold justify-stretch text-zinc-800 dark:text-zinc-100">
               Playlists de
-              <Image src={spotifyLogo} alt="Spotify" width={40} height={40} />
+              <Image
+                src={spotifyLogo}
+                alt="Spotify"
+                width={40}
+                height={40}
+                quality={75}
+              />
             </h4>
-            <p className="mt-4 animate-pulse text-center font-medium text-teal-600 dark:text-teal-400">
+            <p className="mt-4 font-medium text-center text-teal-600 animate-pulse dark:text-teal-400">
               Estas son algunas de mis listas de reproducción favoritas
             </p>
             <ul className="mt-6 space-y-4">
-              <li className="transform transition-all hover:scale-105 hover:rotate-1">
+              <li className="transition-all transform hover:scale-105 hover:rotate-1">
                 <a
                   href="https://open.spotify.com/playlist/6Hl4HtEsBbE72iTCRrtHPZ?si=a56d170ba3ab46eb"
-                  className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
+                  className="flex items-center p-4 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-md group hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
                 >
-                  <strong className="text-zinc-900 transition-colors group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
+                  <strong className="transition-colors text-zinc-900 group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
                     Tunes Midnight
                   </strong>
                   <span className="text-md ml-auto transform text-[#00DA5A] transition-transform group-hover:scale-110">
@@ -107,12 +113,12 @@ export default function About() {
                   </span>
                 </a>
               </li>
-              <li className="transform transition-all hover:scale-105 hover:rotate-1">
+              <li className="transition-all transform hover:scale-105 hover:rotate-1">
                 <a
                   href="https://open.spotify.com/playlist/7rwf3YJPSzIuu4mh3JI7Ow?si=b5b6710a5eac4ffd"
-                  className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
+                  className="flex items-center p-4 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-md group hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
                 >
-                  <strong className="text-zinc-900 transition-colors group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
+                  <strong className="transition-colors text-zinc-900 group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
                     Electronic Remix
                   </strong>
                   <span className="text-md ml-auto transform text-[#00DA5A] transition-transform group-hover:scale-110">
@@ -120,12 +126,12 @@ export default function About() {
                   </span>
                 </a>
               </li>
-              <li className="transform transition-all hover:scale-105 hover:rotate-1">
+              <li className="transition-all transform hover:scale-105 hover:rotate-1">
                 <a
                   href="https://open.spotify.com/playlist/7eMu1fmkKxbfCeGIeapp99?si=26cebc6f2f4d43c6"
-                  className="group flex items-center rounded-lg bg-white p-4 shadow-md transition-all duration-300 ease-in-out hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
+                  className="flex items-center p-4 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-md group hover:bg-teal-50 hover:shadow-xl dark:bg-zinc-700 dark:hover:bg-zinc-600"
                 >
-                  <strong className="text-zinc-900 transition-colors group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
+                  <strong className="transition-colors text-zinc-900 group-hover:text-teal-600 dark:text-zinc-100 dark:group-hover:text-teal-400">
                     Gaming Memento
                   </strong>
                   <span className="text-md ml-auto transform text-[#00DA5A] transition-transform group-hover:scale-110">

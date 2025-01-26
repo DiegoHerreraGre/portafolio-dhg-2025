@@ -36,13 +36,15 @@ export function Footer() {
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400">
                   <p>Tecnologías usadas</p>
-                  <div className="flex items-center gap-4 rounded-2xl bg-slate-200/80 p-2.5 shadow-xs ring-1 ring-zinc-200 transition-colors hover:bg-slate-300/70 dark:bg-zinc-800/80 dark:ring-zinc-700/40 dark:hover:bg-zinc-700/70">
+                  <div className="flex items-center gap-4 rounded-2xl bg-slate-200/80 p-2.5 ring-1 shadow-xs ring-zinc-200 transition-colors hover:bg-slate-300/70 dark:bg-zinc-800/80 dark:ring-zinc-700/40 dark:hover:bg-zinc-700/70">
                     <Image
                       width={16}
                       height={16}
                       src={NextJS}
                       alt="Next.js Logo"
                       className="transition-transform hover:scale-150 dark:invert"
+                      quality={75}
+                      loading="lazy"
                     />
                     <Image
                       width={16}
@@ -50,6 +52,8 @@ export function Footer() {
                       src={Tailwind}
                       alt="Tailwind CSS Logo"
                       className="transition-transform hover:scale-150 dark:invert"
+                      quality={75}
+                      loading="lazy"
                     />
                     <Image
                       width={16}
@@ -57,6 +61,8 @@ export function Footer() {
                       src={MongoDB}
                       alt="MongoDB Logo"
                       className="transition-transform hover:scale-150 dark:invert"
+                      quality={75}
+                      loading="lazy"
                     />
                   </div>
                 </div>

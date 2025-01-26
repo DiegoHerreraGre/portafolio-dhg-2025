@@ -223,9 +223,9 @@ function Avatar({ large = false, className, ...props }) {
           'rotate-90 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9',
         )}
-        priority
         placeholder="blur"
         quality={75}
+        loading="lazy"
       />
     </Link>
   )
