@@ -5,6 +5,9 @@ import envs from '@/config/envs.config'
 import '@/styles/tailwind.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Watermark from '@/config/watermark.config'
+import ContentProtection from '@/components/ContentProtection'
+import ProtectedImage from '@/components/ProtectedImage'
 
 let { NEXT_PUBLIC_SITE_URL } = envs
 
@@ -172,6 +175,9 @@ export default function RootLayout({ children }) {
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>
+            <ContentProtection />
+            <ProtectedImage alt="Contenido Protegido" />
+            <Watermark text="© Contenido Protegido" />
           </div>
         </Providers>
       </body>

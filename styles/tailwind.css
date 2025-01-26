@@ -24,3 +24,21 @@
 body {
   font-family: 'Ubuntu', sans-serif;
 }
+
+/* Prevenir selección de texto */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Prevenir arrastrar imágenes */
+.no-drag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
