@@ -47,11 +47,11 @@ const projects = [
     description:
       'Sitio web inmobiliario moderno construido con tecnologías de última generación para reemplazar la antigua versión en WordPress. Diseñado con un enfoque dinámico de marketing digital para maximizar las ventas de propiedades. La arquitectura headless garantiza tiempos de carga ultrarrápidos y una experiencia de usuario fluida optimizada para conversiones',
     link: {
-      href: 'https://www.estoril820.vercel.app',
+      href: 'https://www.estoril820.cl',
       label: 'Estoril 820',
     },
     logo: NextJS,
-    production: false,
+    production: true,
     tailwind: true,
     mongodb: true,
     creation: false,
@@ -140,7 +140,7 @@ const projects = [
     description:
       'Plataforma web especializada en servicio post venta para Avellaneda Constructora. Diseñada para facilitar el seguimiento de reparaciones, mantenimiento y atención al cliente después de la entrega de propiedades. Incluye sistema de tickets, seguimiento en tiempo real del estado de solicitudes y comunicación directa con el equipo de post venta',
     link: {
-      href: 'https://www.preproduccion.mtmdigital.cl',
+      href: 'https://avellaneda.cl',
       label: 'Avellaneda Constructora',
     },
     logo: PHP,
